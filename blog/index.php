@@ -2,6 +2,11 @@
     include 'databaseConnection.php';
     include 'getPosts.php';
     include 'viewPosts.php';
+
+    //include 'PDO/db.php';
+    //include 'PDO/getPosts.php';
+    //include 'PDO/viewPosts.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -36,6 +41,7 @@
 
     $posts = new ViewPosts();
     $posts->viewAllPosts();
+    //$posts->getTitle();
 ?>
 
         </article>

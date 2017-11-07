@@ -1,11 +1,9 @@
 <?php
-
-include 'database.php';
-
-if (isset$_POST["submit"]))
-{
 	
-}
+	include 'databaseConnection.php';
+    include 'getPosts.php';
+    include 'viewPosts.php';
+    include 'post.php';
 
 ?>
 
@@ -21,10 +19,10 @@ if (isset$_POST["submit"]))
 				<h1>Write a blog post! 寫博文！</h1>
 		<article id="mainContent">
 				<a href="http://localhost:8080/blog/">go back</a>
-			<form action="post.php" method="post"> <!--takes your form to post.php where all the action happens-->
+			<form action="post.php" method="post"> <!--change action=""-->
 				<input type="text" name="title" placeholder="Post title">
 				<input id="textInput" type="text" name="content" placeholder="Post content">
-        		<input type="submit" value="insert"> 
+        		<input type="submit" name="submit" value="insert"> 
 			</form>
 		</article>
 
