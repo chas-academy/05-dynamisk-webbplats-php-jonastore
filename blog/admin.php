@@ -35,7 +35,7 @@
 				<?php
 					$posts = new Update();
     				$posts->updatePosts();
-    				
+
 				?>
 				<select>
 				<input name='title' placeholder='New title here'>
@@ -44,14 +44,14 @@
 			</form>
 
 			<!-- DELETE POSTS -->
-			<form action="Classes/deletePost.php" medthod="post">
+			<form action="Classes/deletePost.php" method="post">
 				<select name="select">
 				<?php
 					$posts = new Update();
     				$posts->updatePosts();
 				?>	
 				</select>
-				<input type='submit' name='submit' value='Delete'>
+				<input type='submit' name='delete' value='Delete'>
 			</form>
 			</form>
 		</article>
