@@ -17,19 +17,6 @@
 			}
 		}
 
-		public function getTitle() {
-			$posts = $this->getAllPosts();
-			foreach ($posts as $post) {
-				echo "<p>" . $post['title'] . "</p>";
-			}
-		}
-
-		public function getContent() {
-			$posts = $this->getAllPosts();
-			foreach ($posts as $post) {
-				echo "<p>" . $post['content'] . "</p>";
-			}
-		}
 	}
 
 

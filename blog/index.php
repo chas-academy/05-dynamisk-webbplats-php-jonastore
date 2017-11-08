@@ -1,12 +1,7 @@
 <?php
-    include 'databaseConnection.php';
-    include 'getPosts.php';
-    include 'viewPosts.php';
-
-    //include 'PDO/db.php';
-    //include 'PDO/getPosts.php';
-    //include 'PDO/viewPosts.php';
-
+    include 'Classes/databaseConnection.php';
+    include 'Classes/getPosts.php';
+    include 'Classes/viewPosts.php';
 ?>
 
 <!DOCTYPE html>

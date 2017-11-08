@@ -9,7 +9,7 @@
 		private $databaseName;
 
 		//this is PROTECTED so that we can use this when we extend this class further into new classes, like $this->connect()
-		protected function connect() {
+		public function connect() {
 			$this->servername = "localhost";	
 			$this->username = "root";
 			$this->password = "root";

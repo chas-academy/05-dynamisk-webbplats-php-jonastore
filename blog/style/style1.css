@@ -11,6 +11,7 @@ body {
 
 #mainContainer {
     width: 70%;
+    height: auto;
     background-color: beige;
     opacity: .8;
     margin: auto;
@@ -43,7 +44,7 @@ form{
     float: right;
 }
 
-input {
+input, select{
     border: 1px solid black;
     border-radius: 50px; 
     margin: 10px 5px 15px 5px;  
@@ -91,4 +92,18 @@ h3 {
     font-size: .7em;
     margin-bottom: 50px;
     letter-spacing: 5.5px;
+}
+
+a {
+    border: 1px solid black;
+    border-radius: 50px; 
+    margin: 10px 5px 15px 5px;  
+    background-color: beige;
+    color: black; 
+    padding: 10px;
+    text-decoration: none;
+}
+
+a:hover{
+    background: lightcoral;
 }
