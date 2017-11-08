@@ -35,17 +35,24 @@
 				<?php
 					$posts = new Update();
     				$posts->updatePosts();
+    				
 				?>
 				<select>
-				<!--
-				<input name='title' placeholder="Select post by title">-->
-				<input name='content' placeholder="update content here">
-				<?php
-					//$posts = new ShowUpdateContent();
-    				//$posts->showContent();
-				?>
+				<input name='title' placeholder='New title here'>
+				<input name='content' placeholder='New content here'>
 				<input type='submit' name='submit' value='Update'></p>
-				
+			</form>
+
+			<!-- DELETE POSTS -->
+			<form action="Classes/deletePost.php" medthod="post">
+				<select name="select">
+				<?php
+					$posts = new Update();
+    				$posts->updatePosts();
+				?>	
+				</select>
+				<input type='submit' name='submit' value='Delete'>
+			</form>
 			</form>
 		</article>
 

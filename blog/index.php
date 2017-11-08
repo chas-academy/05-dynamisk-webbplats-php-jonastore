@@ -33,10 +33,8 @@
 
 
 <?php
-
     $posts = new ViewPosts();
     $posts->viewAllPosts();
-    //$posts->getTitle();
 ?>
 
         </article>

@@ -8,18 +8,18 @@
 	
 	//$title = $_POST['select'];
 	//$content = $_POST['content'];
-	//$date = $_POST['date'];
+	//$date = $_POST['select'];
 	//update post title, content where DATE=SELECT
 
-	$sql = "UPDATE post SET title='$_POST[title]', content='$_POST[content]' WHERE date='$_POST[select]'";
+	$sql = "DELETE FROM post WHERE date='$_POST[select]'";
 	if (mysqli_query($conn, $sql))
 		{
-			echo 'post SUCCESSFULLY updated! <a href="http://localhost:8080/blog/admin.php">go back</a>';	
+			echo 'post SUCCESSFULLY deleted!  <a href="http://localhost:8080/blog/admin.php">go back</a>';	
 			echo $sql;
 		}
 		else
 		{
-			echo 'post NOT updated <a href="http://localhost:8080/blog/admin.php">go back</a>';
+			echo 'post NOT deleted! It is still there! <a href="http://localhost:8080/blog/admin.php">go back</a>';
 		}
 
 ?>
