@@ -2,9 +2,9 @@
 	
 	include_once 'Classes/databaseConnection.php';
     include_once 'Classes/getPosts.php';
-    include_once 'Classes/viewPosts.php';
-    include_once 'Classes/updatePosts.php';
-    include_once 'Classes/showCorrespondingContent.php';
+    include_once 'Views/viewPosts.php';
+    include_once 'Views/updatePosts.php';
+    include_once 'Views/showCorrespondingContent.php';
 
 ?>
 
@@ -23,14 +23,14 @@
 			<a href="http://localhost:8080/blog/">go back</a>
 
 			<!-- INSERT POSTS -->
-			<form action="Classes/insertPost.php" method="post"> <!--change action=""-->
+			<form action="Inserts/insertPost.php" method="post"> <!--change action=""-->
 				<input type="text" name="title" placeholder="Post title">
 				<input id="textInput" type="text" name="content" placeholder="Post content">
         		<input type="submit" name="submit" value="insert"> 
 			</form>
 
 			<!-- UPDATE POSTS -->
-			<form action="Classes/insertUpdate.php" method="post">
+			<form action="Inserts/insertUpdate.php" method="post">
 				<select name="select">
 				<?php
 					$posts = new Update();
@@ -44,7 +44,7 @@
 			</form>
 
 			<!-- DELETE POSTS -->
-			<form action="Classes/deletePost.php" method="post">
+			<form action="Inserts/deletePost.php" method="post">
 				<select name="select">
 				<?php
 					$posts = new Update();
@@ -52,7 +52,6 @@
 				?>	
 				</select>
 				<input type='submit' name='delete' value='Delete'>
-			</form>
 			</form>
 		</article>
 

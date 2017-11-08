@@ -1,5 +1,7 @@
 <?php
 		
+	$conn = mysqli_connect("localhost", "root", "root", "blogDatabase");
+
 	class Database {
 
 		//these guys remain private so that ONLY methods INSIDE the dBase class have access to them!

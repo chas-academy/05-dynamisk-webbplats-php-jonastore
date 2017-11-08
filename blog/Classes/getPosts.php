@@ -1,8 +1,5 @@
 
-<?php
-
-//include 'databaseConnections';
-		
+<?php		
 
 	class Posts extends Database{
 

@@ -1,7 +1,7 @@
 <?php
     include 'Classes/databaseConnection.php';
     include 'Classes/getPosts.php';
-    include 'Classes/viewPosts.php';
+    include 'Views/viewPosts.php';
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +19,7 @@
 <header id="headerContainer">
     <section id="headerContent">
         <h1>世界上最糟糕的博客 &#128004;</h1><!--худший блог в мире 世界上最糟糕的博客 дэлхийн хамгийн муу блог 自分を殺そう-->
-        <form action="index.php" method="post">
+        <form action="admin.php" method="post">
         <input id="user" type="text" name="username" placeholder="Username">
         <input id="pass" type="password" name="password" placeholder="Password">
         <input id="log" type="submit" name="submit" value="Log in">
