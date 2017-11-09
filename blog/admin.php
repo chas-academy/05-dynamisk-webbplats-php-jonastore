@@ -29,6 +29,16 @@
 		<article id="mainContent">
 			
 			<a href="http://localhost:8080/blog/">go back</a>
+			<?php
+				if (!isset($_SESSION['username'])) {
+					echo "<h1>You have to log in to view his page!</h1>";
+					echo "<form action='Classes/login.php' method='post'>
+        				  <input id='user' type='text' name='username' placeholder='Username'>
+        				  <input id='pass' type='password' name='password' placeholder='Password'>
+        				  <input id='log' type='submit' name='submit' value='Log in'>
+        				  </form>";
+    			}
+				?>
 
 			<!-- INSERT POSTS -->
 			<form action="Inserts/insertPost.php" method="post"> <!--change action="" what do you mean change action????-->

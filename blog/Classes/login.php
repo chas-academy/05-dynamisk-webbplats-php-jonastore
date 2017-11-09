@@ -23,7 +23,7 @@ if(isset($_POST['username'])){
 		header("location: ../admin.php?login=success");
 	}
 	else {
-		header("location: ../index.php?login=failure");
+		header("location: ../admin.php?login=failure");
 	}
 
 }

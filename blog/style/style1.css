@@ -11,7 +11,7 @@ body {
 
 #mainContainer {
     width: 70%;
-    height: auto;
+    height: 80%;
     background-color: beige;
     opacity: .8;
     margin: auto;
@@ -22,7 +22,7 @@ body {
 
 #mainContent {
     width: 80%;
-    height: auto;
+    height: 80%;
     background-color: beige;
     margin: 10% auto 10% auto;
     padding: 22px;
