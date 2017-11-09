@@ -6,7 +6,7 @@
 		public function updatePosts() {
 			$posts = $this->getAllPosts();
 			foreach ($posts as $post) {
-				echo "<p><option name='title' value='" . $post['date'] . "'>" . $post['title'] . "</option>";
+				echo "<option name='title' value='" . $post['date'] . "'>" . $post['title'] . "</option>";
 				//echo "<input name='' value='" . $post['content'] . "'>"; 
 				//echo "<option name='id' value='" . $post['id'] . "'></option>"; 
 

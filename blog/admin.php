@@ -27,36 +27,52 @@
 			<form action="Inserts/insertPost.php" method="post"> <!--change action="" what do you mean change action????-->
 				<select>
 				<?php
+				if (isset($_SESSION['username'])) {
 					$posts = new ViewPosts();
                     $posts->viewAllCategories();
+					echo "<input type='text' name='title' placeholder='Post title'>";
+					echo "<input id='textInput' type='text' name='content' placeholder='Post content'>";
+					echo "<input type='submit' name='submit' value='insert'> "; 
+				} 
+					
 				?>
 				</select>
-				<input type="text" name="title" placeholder="Post title">
+				<!--<input type="text" name="title" placeholder="Post title">
 				<input id="textInput" type="text" name="content" placeholder="Post content">
-        		<input type="submit" name="submit" value="insert"> 
+        		<input type="submit" name="submit" value="insert">-->
+				}
 			</form>
 
 			<!-- UPDATE POSTS -->
 			<form action="Inserts/insertUpdate.php" method="post">
 				<select name="select">
 				<?php
+				if (isset($_SESSION['username'])) {
 					$posts = new Update();
     				$posts->updatePosts();
+    				echo "<input name='title' placeholder='New title here'>";
+    				echo "<input name='content' placeholder='New content here'>";
+    				echo "<input type='submit' name='submit' value='Update'>";
+    			}
 				?>
 				<select>
-				<input name='title' placeholder='New title here'>
+				<!--<input name='title' placeholder='New title here'>
 				<input name='content' placeholder='New content here'>
-				<input type='submit' name='submit' value='Update'></p>
+				<input type='submit' name='submit' value='Update'>--></p>
 			</form>
 
 			<!-- DELETE POSTS -->
 			<form action="Inserts/deletePost.php" method="post">
-				<select name="select">
+				<select name='select'>
 				<?php
+				//if (isset($_SESSION['username'])) {
+					//echo "<select name='select'>";
 					$posts = new Update();
     				$posts->updatePosts();
-    				
-				?>	
+    				//echo "</select>";
+    				//echo "<input type='submit' name='delete' value='Delete'>";
+    			//}
+				?>
 				</select>
 				<input type='submit' name='delete' value='Delete'>
 			</form>
