@@ -52,14 +52,10 @@
 					echo "<input id='textInput' type='text' name='content' placeholder='Post content'>";
 					echo "<input type='submit' name='submit' value='insert'> "; 
 					echo "</select>";
-					//echo "$_SESSION['username']";
 				} 
 					
 				?>
-				
-				<!--<input type="text" name="title" placeholder="Post title">
-				<input id="textInput" type="text" name="content" placeholder="Post content">
-        		<input type="submit" name="submit" value="insert">-->
+			
 				
 			</form>
 
@@ -78,9 +74,6 @@
     			}
 				?>
 				
-				<!--<input name='title' placeholder='New title here'>
-				<input name='content' placeholder='New content here'>
-				<input type='submit' name='submit' value='Update'>--></p>
 			</form>
 
 			<!-- DELETE POSTS -->

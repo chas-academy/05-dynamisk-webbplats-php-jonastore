@@ -3,6 +3,8 @@
     include 'Classes/getPosts.php';
     include 'Views/viewPosts.php';
     session_start();
+    session_unset();
+    session_destroy();
 
 ?>
 
