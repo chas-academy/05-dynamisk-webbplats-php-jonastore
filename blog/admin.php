@@ -40,7 +40,7 @@
 				<!--<input type="text" name="title" placeholder="Post title">
 				<input id="textInput" type="text" name="content" placeholder="Post content">
         		<input type="submit" name="submit" value="insert">-->
-				}
+				
 			</form>
 
 			<!-- UPDATE POSTS -->
@@ -55,7 +55,7 @@
     				echo "<input type='submit' name='submit' value='Update'>";
     			}
 				?>
-				<select>
+				</select>
 				<!--<input name='title' placeholder='New title here'>
 				<input name='content' placeholder='New content here'>
 				<input type='submit' name='submit' value='Update'>--></p>
@@ -63,18 +63,15 @@
 
 			<!-- DELETE POSTS -->
 			<form action="Inserts/deletePost.php" method="post">
-				<select name='select'>
 				<?php
-				//if (isset($_SESSION['username'])) {
-					//echo "<select name='select'>";
+				if (isset($_SESSION['username'])) {
+					echo "<select name='select'>";
 					$posts = new Update();
     				$posts->updatePosts();
-    				//echo "</select>";
-    				//echo "<input type='submit' name='delete' value='Delete'>";
-    			//}
+    				echo "</select>";
+    				echo "<input type='submit' name='delete' value='Delete'>";
+    			}
 				?>
-				</select>
-				<input type='submit' name='delete' value='Delete'>
 			</form>
 		</article>
 
