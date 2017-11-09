@@ -33,8 +33,8 @@
 				if (!isset($_SESSION['username'])) {
 					echo "<h1>You have to log in to view his page!</h1>";
 					echo "<form action='Classes/login.php' method='post'>
-        				  <input id='user' type='text' name='username' placeholder='Username'>
-        				  <input id='pass' type='password' name='password' placeholder='Password'>
+        				  <input id='user' type='text' name='username' placeholder='Username' value='admin'>
+        				  <input id='pass' type='password' name='password' placeholder='Password' value='wrongpassword'>
         				  <input id='log' type='submit' name='submit' value='Log in'>
         				  </form>";
     			}
@@ -67,10 +67,11 @@
 					echo "<select name='select'>";
 					$posts = new Update();
     				$posts->updatePosts();
+    				echo "</select>";
     				echo "<input name='title' placeholder='New title here'>";
     				echo "<input name='content' placeholder='New content here'>";
     				echo "<input type='submit' name='submit' value='Update'>";
-    				echo "</select>";
+    				
     			}
 				?>
 				

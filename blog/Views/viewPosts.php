@@ -12,13 +12,14 @@
 			else
 				{
 					foreach ($posts as $post) {
-					echo "<h3>☯ " . $post['title'] . " ☯</h3>";
+					echo "<h3>标 " . $post['title'] . " 题</h3>";
 					echo "<p>" . $post['content'] . "</p>"; 
 					echo "<p class='date'>" . $post['date'] . "</p>";
 					//echo "<p>❀ ✿ ✶ ✴ ❄ ❉ ❋ ❖ ⊹❀ ✿ ✶ ✴ ❄ ❉ ❋ ❖ ⊹❀ ✿ ✶ ✴ ❄ ❉ ❋ ❖ ⊹</p>";
-					echo "<p>Category : Tags : " . "#" . $post['title'] .  "</p>";
+					echo "<p>Category :" . $post['category'] .  "</p>";
 					//echo "<p>Tags : " . "#" . $post['title'] .  "</p>";
-					echo "<p>❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ </p>";
+					echo "<p>-----------------------------------------------------------------</p>";
+					//echo "<p>❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ </p>";
 				}
 
 			}
@@ -34,7 +35,7 @@
 			else
 				{
 					foreach ($posts as $post) {
-					echo "<option>" . $post['category'] . "</option>";
+					echo "<option value='" . $post['category_id'] . "'>" . $post['category'] . "</option>";
 				}
 
 			}

@@ -19,10 +19,11 @@
 
 <header id="headerContainer">
     <section id="headerContent">
-        <h1>世界上最糟糕的博客 &#128004;</h1><!--худший блог в мире 世界上最糟糕的博客 дэлхийн хамгийн муу блог 自分を殺そう-->
+        <h1>世界上最糟糕的博客 </h1><!--худший блог в мире 世界上最糟糕的博客 дэлхийн хамгийн муу блог 自分を殺そう &#128004;-->
         <form action="Classes/login.php" method="post">
-        <input id="user" type="text" name="username" placeholder="Username" value="">
-        <input id="pass" type="password" name="password" placeholder="Password" value="">
+            <!-- HIDE THE LOGIN FORM IF SESSION IS ACTIVE! -->
+        <input id="user" type="text" name="username" placeholder="Username" value="admin">
+        <input id="pass" type="password" name="password" placeholder="Password" value="wrongpassword">
         <input id="log" type="submit" name="submit" value="Sign in">
         </form>
     </section>

@@ -1,8 +1,9 @@
 body {
-    background-image: url("../images/bg.png");
+    background-image: url("../images/bg.jpg");
     background-color: lightblue;
     background-size: cover;
-    color: black;
+    background-repeat: no-repeat;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     margin: 0;
@@ -12,18 +13,18 @@ body {
 #mainContainer {
     width: 70%;
     height: 80%;
-    background-color: beige;
+    background-color: #4E2C69;
     opacity: .8;
     margin: auto;
     margin-top: 5%;
     text-align: center;
-    border: .5px black solid;
+    border: .5px lightblue solid;
 }
 
 #mainContent {
     width: 80%;
     height: 80%;
-    background-color: beige;
+    background-color: #4E2C69;
     margin: 10% auto 10% auto;
     padding: 22px;
 }
@@ -31,7 +32,7 @@ body {
 #headerContent {
     width: 100%;
     height: auto;
-    background-color: beige;
+    background-color: #4E2C69;
     opacity: .9;
     border-bottom: .5px solid black;
 }
@@ -45,12 +46,21 @@ form{
 }
 
 input, select{
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 50px; 
     margin: 10px 5px 15px 5px;  
-    background-color: beige;
-    color: black; 
+    background-color: #AE3557;
+    color: white; 
     padding: 10px;
+    text-shadow: 0 0 1px white;
+
+}
+
+input::-webkit-input-placeholder {
+        background-color: #AE3557;
+        color: white;
+
+
 }
 
 #textInput {
@@ -62,13 +72,16 @@ input, select{
     border-radius: 50px;
     padding: 10px;
     margin-right: 135px;
-    background-color: lightcoral;
-    border: 1px black solid;
+    background-color: #AE3557;
+    border: 1px black white;
+
 }
 
 #log:focus {outline:0;}
 
-input:focus {outline:0}
+input:focus {
+    outline:0;
+}
 
 h1{
     font-size: 1.8em;
@@ -77,12 +90,16 @@ h1{
     font-variant: small-caps;
     font-style: italic;
     font-weight: lighter;
-    background: lightblue;
-    color: beige;
+    background: purple;
+    color: white;
+    text-shadow: 0 0 4px white;
+
 }
 
 h3 {
     font-size: 1.5em;
+    text-shadow: 0 0 5px white;
+
 }
 
 .date {
@@ -96,17 +113,11 @@ h3 {
     letter-spacing: 5.5px;
 }
 
-/*a {
-    border: 1px solid black;
-    border-radius: 50px; 
-    margin: 10px 5px 15px 5px;  
-    background-color: beige;
-    color: black; 
-    padding: 10px;
-    text-decoration: none;
+a {
+    color: white;
 }
 
-a:hover{
+/*a:hover{
     background: lightblue;
 }*/
 
@@ -114,3 +125,4 @@ li {
     display: inline;
     text-decoration: none;
 }
+
