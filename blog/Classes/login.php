@@ -1,9 +1,10 @@
 <?php
 
-if (isset($_POST['submit']))//if submit button is clicked, execute the following code
+if (!$this->request->isPost());
+	//skicka fel om requesten INTE är en post
 
-	include 'databaseConnection.php';
+setcookie('user', $user->getId())
+//rensa kakor när du håller på med detta
 
-	$username = mysqli_real_escape_string($conn, $_POST['username']);
-	$password =	mysqli_real_escape_string($conn, $_POST['password']);
+
 ?>

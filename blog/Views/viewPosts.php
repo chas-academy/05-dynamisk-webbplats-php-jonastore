@@ -6,24 +6,36 @@
 		public function viewAllPosts() {
 			$posts = $this->getAllPosts();
 			if (!$posts)
-			{
-				echo "<p>nothing to see here</p>";
-			} 
+				{
+					echo "<p>nothing to see here</p>";
+				} 
 			else
-			{
-				foreach ($posts as $post) {
-				echo "<h3>☯ " . $post['title'] . " ☯</h3>";
-				echo "<p>" . $post['content'] . "</p>"; 
-				echo "<p class='date'>" . $post['date'] . "</p>";
-				//echo "<p>❀ ✿ ✶ ✴ ❄ ❉ ❋ ❖ ⊹❀ ✿ ✶ ✴ ❄ ❉ ❋ ❖ ⊹❀ ✿ ✶ ✴ ❄ ❉ ❋ ❖ ⊹</p>";
-				echo "<p>Category : Tags : " . "#" . $post['title'] .  "</p>";
-				//echo "<p>Tags : " . "#" . $post['title'] .  "</p>";
-				echo "<p>❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ </p>";
+				{
+					foreach ($posts as $post) {
+					echo "<h3>☯ " . $post['title'] . " ☯</h3>";
+					echo "<p>" . $post['content'] . "</p>"; 
+					echo "<p class='date'>" . $post['date'] . "</p>";
+					//echo "<p>❀ ✿ ✶ ✴ ❄ ❉ ❋ ❖ ⊹❀ ✿ ✶ ✴ ❄ ❉ ❋ ❖ ⊹❀ ✿ ✶ ✴ ❄ ❉ ❋ ❖ ⊹</p>";
+					echo "<p>Category : Tags : " . "#" . $post['title'] .  "</p>";
+					//echo "<p>Tags : " . "#" . $post['title'] .  "</p>";
+					echo "<p>❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ </p>";
+				}
+
 			}
+		}
 
-			
-
-
+		public function viewAllCategories() {
+			$posts = $this->getAllCategories();
+			$sql = "GET * FROM categories WHERE category='category'";
+			if (!$posts)
+				{
+					echo "<p>nothing to see here</p>";
+				} 
+			else
+				{
+					foreach ($posts as $post) {
+					echo "<option>" . $post['category'] . "</option>";
+				}
 
 			}
 		}

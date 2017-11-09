@@ -2,6 +2,8 @@
     include 'Classes/databaseConnection.php';
     include 'Classes/getPosts.php';
     include 'Views/viewPosts.php';
+    session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +21,7 @@
 <header id="headerContainer">
     <section id="headerContent">
         <h1>世界上最糟糕的博客 &#128004;</h1><!--худший блог в мире 世界上最糟糕的博客 дэлхийн хамгийн муу блог 自分を殺そう-->
-        <form action="admin.php" method="post">
+        <form action="Classes/login.php" method="post">
         <input id="user" type="text" name="username" placeholder="Username">
         <input id="pass" type="password" name="password" placeholder="Password">
         <input id="log" type="submit" name="submit" value="Log in">
@@ -27,16 +29,23 @@
     </section>
 </header>
 
- <main id="container">
     <section class="row" id="mainContainer">
+        <form action="" method="post">    
+            <select>
+                <?php
+                    $posts = new ViewPosts();
+                    $posts->viewAllCategories();
+                ?>
+            </select>
+            <input type='submit' name='submit' value='Find Posts'>
+        </form>
+
         <article id="mainContent">
-
-
-<?php
-    $posts = new ViewPosts();
-    $posts->viewAllPosts();
-?>
-
+        <?php
+            $posts = new ViewPosts();
+            $posts->viewAllPosts();
+        ?>
+    
         </article>
     </section>
     

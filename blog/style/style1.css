@@ -77,6 +77,8 @@ h1{
     font-variant: small-caps;
     font-style: italic;
     font-weight: lighter;
+    background: lightblue;
+    color: beige;
 }
 
 h3 {
@@ -94,7 +96,7 @@ h3 {
     letter-spacing: 5.5px;
 }
 
-a {
+/*a {
     border: 1px solid black;
     border-radius: 50px; 
     margin: 10px 5px 15px 5px;  
@@ -106,4 +108,9 @@ a {
 
 a:hover{
     background: lightblue;
+}*/
+
+li {
+    display: inline;
+    text-decoration: none;
 }

@@ -5,6 +5,7 @@
     include_once 'Views/viewPosts.php';
     include_once 'Views/updatePosts.php';
     include_once 'Views/showCorrespondingContent.php';
+    session_start();
 
 ?>
 
@@ -23,7 +24,13 @@
 			<a href="http://localhost:8080/blog/">go back</a>
 
 			<!-- INSERT POSTS -->
-			<form action="Inserts/insertPost.php" method="post"> <!--change action=""-->
+			<form action="Inserts/insertPost.php" method="post"> <!--change action="" what do you mean change action????-->
+				<select>
+				<?php
+					$posts = new ViewPosts();
+                    $posts->viewAllCategories();
+				?>
+				</select>
 				<input type="text" name="title" placeholder="Post title">
 				<input id="textInput" type="text" name="content" placeholder="Post content">
         		<input type="submit" name="submit" value="insert"> 
@@ -35,7 +42,6 @@
 				<?php
 					$posts = new Update();
     				$posts->updatePosts();
-
 				?>
 				<select>
 				<input name='title' placeholder='New title here'>
@@ -49,6 +55,7 @@
 				<?php
 					$posts = new Update();
     				$posts->updatePosts();
+    				
 				?>	
 				</select>
 				<input type='submit' name='delete' value='Delete'>

@@ -18,11 +18,12 @@
 		{
 			//echo 'post SUCCESSFULLY updated! <a href="http://localhost:8080/blog/admin.php">go back</a>';	
 			//echo $sql;
-			header("location: ../admin.php?=update=success");
+			header("location: ../admin.php?update=success");
 		}
 		else
 		{
-			echo 'post NOT updated <a href="http://localhost:8080/blog/admin.php">go back</a>';
+			//echo 'post NOT updated <a href="http://localhost:8080/blog/admin.php">go back</a>';
+			header("location: ../admin.php?insert=error");
 		}
 
 ?>

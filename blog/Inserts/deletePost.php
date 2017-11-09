@@ -14,7 +14,7 @@
 		{
 			//echo 'post SUCCESSFULLY deleted!  <a href="http://localhost:8080/blog/admin.php">go back</a>';	
 			//echo $sql;
-			header("location: ../admin.php?=delete=success");
+			header("location: ../admin.php?delete=success");
 		}
 		else
 		{
