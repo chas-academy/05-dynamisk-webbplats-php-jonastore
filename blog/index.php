@@ -2,9 +2,6 @@
     include 'Classes/databaseConnection.php';
     include 'Classes/getPosts.php';
     include 'Views/viewPosts.php';
-    session_start();
-    session_unset();
-    session_destroy();
 
 ?>
 
@@ -26,7 +23,7 @@
         <form action="Classes/login.php" method="post">
         <input id="user" type="text" name="username" placeholder="Username" value="">
         <input id="pass" type="password" name="password" placeholder="Password" value="">
-        <input id="log" type="submit" name="submit" value="Log in">
+        <input id="log" type="submit" name="submit" value="Sign in">
         </form>
     </section>
 </header>
