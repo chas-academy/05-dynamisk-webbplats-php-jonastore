@@ -14,15 +14,15 @@ if(isset($_POST['submit'])){
 
 	$category = $_POST['select'];
 
-	$sql = mysqli_query($conn, "SELECT * FROM users WHERE username='" . $username . "' AND password='" . $password . "' LIMIT 1");
-	$result = mysqli_num_rows($sql);
+	$sql = "SELECT * FROM post WHERE category='" . $category . "'";
+	//$result = mysqli_num_rows($sql);
 
-	if ($result == 1) {
-		$_SESSION['username'] = $result;
-		header("location: ../admin.php?login=success");
+	if ($sql == true) {
+		header("location: ../index.php?login=success");
+		
 	}
 	else {
-		header("location: ../admin.php?login=failure");
+		header("location: ../index.php?login=failure");
 	}
 
 }

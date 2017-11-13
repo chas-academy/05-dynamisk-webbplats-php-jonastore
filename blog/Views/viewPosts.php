@@ -41,6 +41,22 @@
 			}
 		}
 
+		public function viewAllTags() {
+			$posts = $this->getAllTags();
+			$sql = "GET * FROM categories WHERE tag='tag'";
+			if (!$posts)
+				{
+					echo "<p>nothing to see here</p>";
+				} 
+			else
+				{
+					foreach ($posts as $post) {
+					echo "<option value='" . $post['tag'] . "'>" . $post['tag'] . "</option>";
+				}
+
+			}
+		}
+
 	}
 
 

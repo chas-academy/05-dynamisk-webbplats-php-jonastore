@@ -30,7 +30,7 @@
 </header>
 
     <section class="row" id="mainContainer">
-        <form action="" method="post">    
+        <form action="Classes/findPosts.php" method="post">    
             <select name='select'>
                 <?php
                     $posts = new ViewPosts();
