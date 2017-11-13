@@ -45,13 +45,13 @@
 				
 				<?php
 				if (isset($_SESSION['username'])) {
-					echo "<select>";
+					echo "<select name='select'>";
 					$posts = new ViewPosts();
                     $posts->viewAllCategories();
+                    echo "</select>";
 					echo "<input type='text' name='title' placeholder='Post title'>";
 					echo "<input id='textInput' type='text' name='content' placeholder='Post content'>";
 					echo "<input type='submit' name='submit' value='insert'> "; 
-					echo "</select>";
 				} 
 					
 				?>

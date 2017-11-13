@@ -35,7 +35,7 @@
 			else
 				{
 					foreach ($posts as $post) {
-					echo "<option value='" . $post['category_id'] . "'>" . $post['category'] . "</option>";
+					echo "<option value='" . $post['category'] . "'>" . $post['category'] . "</option>";
 				}
 
 			}
