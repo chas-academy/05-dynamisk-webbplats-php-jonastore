@@ -12,13 +12,12 @@ include 'databaseConnection.php';
 
 if(isset($_POST['submit'])){
 
-	$username = $_POST['username'];
-	$password = $_POST['password'];
+	$category = $_POST['select'];
 
-	$sql = mysqli_query($conn, "SELECT * FROM users WHERE username='" . $username . "' AND password='" . $password . "'");
+	$sql = mysqli_query($conn, "SELECT * FROM users WHERE username='" . $username . "' AND password='" . $password . "' LIMIT 1");
 	$result = mysqli_num_rows($sql);
 
-	if ($result > 0) {
+	if ($result == 1) {
 		$_SESSION['username'] = $result;
 		header("location: ../admin.php?login=success");
 	}

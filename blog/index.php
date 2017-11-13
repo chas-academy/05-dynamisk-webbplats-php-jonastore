@@ -31,7 +31,7 @@
 
     <section class="row" id="mainContainer">
         <form action="" method="post">    
-            <select>
+            <select name='select'>
                 <?php
                     $posts = new ViewPosts();
                     $posts->viewAllCategories();
