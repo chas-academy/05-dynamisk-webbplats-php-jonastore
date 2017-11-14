@@ -2,8 +2,7 @@
 
 	if (isset($_POST['submit'])){
 		session_start();
-		session_unset();
-		session_destroy();
+		session_destroy(); //session unset?
 		header("location: ../index.php");
 	}
 

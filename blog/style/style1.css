@@ -92,15 +92,16 @@ h1{
     font-weight: lighter;
     background: purple;
     color: white;
-    text-shadow: 0 0 4px white;
+    text-shadow: 0 0 30px #FF0000, 0 0 55px #0000FF;
 
 }
+
 
 h3 {
     font-size: 1.5em;
-    text-shadow: 0 0 5px white;
-
+    text-shadow: 0 0 30px #FF0000, 0 0 55px #0000FF;
 }
+
 
 .date {
     font-style: italic;
@@ -126,3 +127,6 @@ li {
     text-decoration: none;
 }
 
+.line {
+    text-shadow: 0 0 150px #FF1177;
+}

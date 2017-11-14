@@ -4,7 +4,7 @@
 
 	$tag = mysqli_real_escape_string($conn, $_POST['tag']);
 
-	$sql = "INSERT INTO tags (tag) VALUES ('$tag');";
+	$sql = "INSERT INTO tags (tag) VALUES ('$tag')";
 	//$sql = "INSERT INTO post (title, content, date) VALUES ('$title', '$content', now());";
 	if (mysqli_query($conn, $sql))
 		{

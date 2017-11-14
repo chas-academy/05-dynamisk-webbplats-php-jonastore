@@ -6,20 +6,22 @@
 //setcookie('user', $user->getId())
 //rensa kakor när du håller på med detta
 
+include 'databaseConnection.php';
+
 session_start();
 
-include 'databaseConnection.php';
+$username = $_POST['username'];
+$password = $_POST['password'];
+
 
 if(isset($_POST['submit'])){
 
-	$username = $_POST['username'];
-	$password = $_POST['password'];
 
 	$sql = mysqli_query($conn, "SELECT * FROM users WHERE username='" . $username . "' AND password='" . $password . "'");
-	$result = mysqli_num_rows($sql);
+	$numRows = mysqli_num_rows($sql);
 
-	if ($result > 0) {
-		$_SESSION['username'] = $result;
+	if ($numRows > 0) {
+		$_SESSION['username'] = $username;
 		header("location: ../admin.php?login=success");
 	}
 	else {

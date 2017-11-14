@@ -22,7 +22,7 @@
 		}
 
 		protected function getAllTags() {
-			$sql = "SELECT * FROM categories ORDER BY category_id ASC";
+			$sql = "SELECT * FROM tags ORDER BY tag_id DESC";
 			$result = $this->connect()->query($sql); 
 				while ($row = $result->fetch_assoc()){ //comment this
 					$postArr[] = $row;				   //put the rows in the $postArr array

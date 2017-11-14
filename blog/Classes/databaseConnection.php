@@ -1,23 +1,19 @@
 <?php
-		
+	
+	//connection for the inserts and login
 	$conn = mysqli_connect("localhost", "root", "root", "blogDatabase");
 
+	//class for inheritance with the get and view classes
 	class Database {
 
-		//these guys remain private so that ONLY methods INSIDE the dBase class have access to them!
-		//private $servername;
-		//private $username;
-		//private $password;		//REMOVE THIS?
-		//private $databaseName;
-
 		//this is PROTECTED so that we can use this when we extend this class further into new classes, like $this->connect()
-		public function connect() {
-			$this->servername = "localhost";	
-			$this->username = "root";
-			$this->password = "root";
-			$this->databaseName = "blogDatabase";
+		protected function connect() {
+			$servername = "localhost";	
+			$username = "root";
+			$password = "root";
+			$databaseName = "blogDatabase";
 
-			$conn = new mysqli($this->servername, $this->username, $this->password, $this->databaseName);
+			$conn = new mysqli($servername, $username, $password, $databaseName);
 			
 			return $conn;
 		}
