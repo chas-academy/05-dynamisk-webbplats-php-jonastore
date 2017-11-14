@@ -15,11 +15,8 @@
 					echo "<h3>标 " . $post['title'] . " 题</h3>";
 					echo "<p>" . $post['content'] . "</p>"; 
 					echo "<p class='date'>" . $post['date'] . "</p>";
-					//echo "<p>❀ ✿ ✶ ✴ ❄ ❉ ❋ ❖ ⊹❀ ✿ ✶ ✴ ❄ ❉ ❋ ❖ ⊹❀ ✿ ✶ ✴ ❄ ❉ ❋ ❖ ⊹</p>";
 					echo "<p>Category : " . $post['category'] .  "</p>";
-					echo "<p>Tags : " . "#" . $post['tags'] .  "</p>";
 					echo "<p>-----------------------------------------------------------------</p>";
-					//echo "<p>❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ </p>";
 				}
 
 			}
@@ -34,7 +31,7 @@
 			else
 				{
 					foreach ($posts as $post) {
-					echo "<option value='" . $post['category'] . "'>" . $post['category'] . "</option>";
+					echo "<option value='" . $post['category_id'] . "'>" . $post['category'] . "</option>";
 				}
 
 			}

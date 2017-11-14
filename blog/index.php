@@ -21,7 +21,7 @@
     <section id="headerContent">
         <h1>世界上最糟糕的博客 </h1><!--худший блог в мире 世界上最糟糕的博客 дэлхийн хамгийн муу блог 自分を殺そう &#128004;-->
         <form action="Classes/login.php" method="post">
-            <!-- HIDE THE LOGIN FORM IF SESSION IS ACTIVE! -->
+        <!-- HIDES THE LOGIN FORM IF SESSION IS ACTIVE! -->
         <?php
         if (!isset($_SESSION['username'])) {
         echo "<input id='user' type='text' name='username' placeholder='Username' value='admin'>";
