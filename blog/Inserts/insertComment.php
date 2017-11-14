@@ -20,12 +20,12 @@
 		}
 		else
 		{
-			$query2 = "UPDATE comments SET message='$message' WHERE date='$date'";
-			if (mysqli_query($conn, $query2)){
+			$queryEdit = "UPDATE comments SET message='$message' WHERE postdate='$date'";
+			if (mysqli_query($conn, $queryEdit)){
 				header("location: ../index.php?insert=success");
 			} else {
 				echo 'Update not inserted! <a href="http://localhost:8080/blog/index.php">go back</a>';
-				echo $query;
+				echo $queryEdit;
 				//header("location: ../index.php?insert=error");
 			}
 			//echo 'You have already commented on this post! <a href="http://localhost:8080/blog/index.php">go back</a>';

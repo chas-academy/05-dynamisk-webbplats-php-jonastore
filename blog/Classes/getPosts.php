@@ -12,7 +12,7 @@
 					  ";
 
 			$result = $this->connect()->query($query); 
-				while ($row = $result->fetch_assoc()){ //returns the row result as an associative array, an array with key in it
+				while ($row = $result->fetch_array()){ //returns the row result as an array
 					$postArr[] = $row;				   //put the rows in the $postArr array
 				}
 				return $postArr;
@@ -23,7 +23,7 @@
 			$query = "SELECT * FROM categories
 					  ORDER BY category_id ASC";
 			$result = $this->connect()->query($query); 
-				while ($row = $result->fetch_assoc()){ //comment this
+				while ($row = $result->fetch_array()){ //fetch_assoc?
 					$postArr[] = $row;				   //put the rows in the $postArr array
 				}
 				return $postArr;
@@ -33,7 +33,7 @@
 			$query = "SELECT * FROM tags 
 			 		  ORDER BY tag_id DESC";
 			$result = $this->connect()->query($query); 
-				while ($row = $result->fetch_assoc()){ //comment this
+				while ($row = $result->fetch_array()){ //fetch_assoc?
 					$postArr[] = $row;				   //put the rows in the $postArr array
 				}
 				return $postArr;
@@ -46,7 +46,7 @@
 					  FROM comments
 					  INNER JOIN post ON post.date= comments.postdate ORDER BY date DESC";
 			$result = $this->connect()->query($query); 
-				while ($row = $result->fetch_assoc()){ //comment this
+				while ($row = $result->fetch_array()){ //fetch_assoc?
 					$postArr[] = $row;				   //put the rows in the $postArr array
 				}
 				return $postArr;
