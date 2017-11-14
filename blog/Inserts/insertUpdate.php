@@ -13,8 +13,8 @@
 
 	//GET SOME SECURITY IN HERE MAN vvvvvvvvvv DONE?
 
-	$sql = "UPDATE post SET title='$title', content='$content' WHERE date='$date'";
-	if (mysqli_query($conn, $sql))
+	$query = "UPDATE post SET title='$title', content='$content' WHERE date='$date'";
+	if (mysqli_query($conn, $query))
 		{
 			//echo 'post SUCCESSFULLY updated! <a href="http://localhost:8080/blog/admin.php">go back</a>';	
 			//echo $sql;

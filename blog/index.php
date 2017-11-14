@@ -2,7 +2,7 @@
     include 'Classes/databaseConnection.php';
     include 'Classes/getPosts.php';
     include 'Views/viewPosts.php';
-
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -22,13 +22,21 @@
         <h1>世界上最糟糕的博客 </h1><!--худший блог в мире 世界上最糟糕的博客 дэлхийн хамгийн муу блог 自分を殺そう &#128004;-->
         <form action="Classes/login.php" method="post">
             <!-- HIDE THE LOGIN FORM IF SESSION IS ACTIVE! -->
-        <input id="user" type="text" name="username" placeholder="Username" value="admin">
-        <input id="pass" type="password" name="password" placeholder="Password" value="wrongpassword">
-        <input id="log" type="submit" name="submit" value="Sign in">
+        <?php
+        if (!isset($_SESSION['username'])) {
+        echo "<input id='user' type='text' name='username' placeholder='Username' value='admin'>";
+        echo "<input id='pass' type='password' name='password' placeholder='Password' value='wrongpassword'>";
+        echo "<input id='log' type='submit' name='submit' value='Sign in'>";
+        }
+        if (isset($_SESSION['username'])) {
+        echo "<input type='submit' name='submit' value='Admin page'>";
+        }
+        ?>
         </form>
     </section>
 </header>
 
+        <!-- SEARCH BY CATEGORY -->
     <section class="row" id="mainContainer">
         <form action="Classes/findPosts.php" method="post">    
             <select name='select'>
@@ -40,6 +48,8 @@
             <input type='submit' name='submit' value='Find Posts'>
         </form>
 
+
+        <!-- MAIN CONTENT -->
         <article id="mainContent">
         <?php
             $posts = new ViewPosts();

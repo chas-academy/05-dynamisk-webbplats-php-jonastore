@@ -14,10 +14,10 @@ if(isset($_POST['submit'])){
 
 	$category = $_POST['select'];
 
-	$sql = "SELECT * FROM post WHERE category='" . $category . "'";
+	$query = "SELECT * FROM post WHERE category='" . $category . "'";
 	//$result = mysqli_num_rows($sql);
 
-	if ($sql == true) {
+	if ($query == true) {
 		header("location: ../index.php?login=success");
 		
 	}

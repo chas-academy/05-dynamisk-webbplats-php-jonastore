@@ -14,9 +14,9 @@
 	//$sql = "INSERT INTO posts (title, content, date, category, tag) VALUES ('$title', '$content', now(), '$tag', '$category')";
 	//skriv en $join som du sedan lägger in i $sql??
 
-	$sql = "INSERT INTO post (title, content, category, date) VALUES ('$title', '$content', '$category', now());";
+	$query = "INSERT INTO post (title, content, category, date) VALUES ('$title', '$content', '$category', now());";
 	//$sql = "INSERT INTO post (title, content, date) VALUES ('$title', '$content', now());";
-	if (mysqli_query($conn, $sql))
+	if (mysqli_query($conn, $query))
 		{
 			//echo 'post SUCCESSFULLY inserted into database <a href="http://localhost:8080/blog/admin.php">go back</a>';
 			//echo $sql;

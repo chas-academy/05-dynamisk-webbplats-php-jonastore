@@ -43,6 +43,10 @@ body {
 
 form{
     float: right;
+    border: .2px solid white;
+    border-radius: 17px;
+    box-shadow: inset 0px 0px 25px white, 0px 0px 25px white;
+
 }
 
 input, select{
@@ -127,6 +131,3 @@ li {
     text-decoration: none;
 }
 
-.line {
-    text-shadow: 0 0 150px #FF1177;
-}

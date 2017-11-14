@@ -14,7 +14,7 @@
 			$databaseName = "blogDatabase";
 
 			$conn = new mysqli($servername, $username, $password, $databaseName);
-			
+					
 			return $conn;
 		}
 

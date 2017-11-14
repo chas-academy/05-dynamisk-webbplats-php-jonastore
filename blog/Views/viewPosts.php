@@ -18,7 +18,7 @@
 					//echo "<p>❀ ✿ ✶ ✴ ❄ ❉ ❋ ❖ ⊹❀ ✿ ✶ ✴ ❄ ❉ ❋ ❖ ⊹❀ ✿ ✶ ✴ ❄ ❉ ❋ ❖ ⊹</p>";
 					echo "<p>Category : " . $post['category'] .  "</p>";
 					echo "<p>Tags : " . "#" . $post['tags'] .  "</p>";
-					echo "<p class='line'>-----------------------------------------------------------------</p>";
+					echo "<p>-----------------------------------------------------------------</p>";
 					//echo "<p>❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ </p>";
 				}
 
@@ -27,7 +27,6 @@
 
 		public function viewAllCategories() {
 			$posts = $this->getAllCategories();
-			//$sql = "GET * FROM categories WHERE category='category'";
 			if (!$posts)
 				{
 					echo "<p>nothing to see here</p>";
@@ -43,7 +42,6 @@
 
 		public function viewAllTags() {
 			$posts = $this->getAllTags();
-			//$sql = "GET * FROM tags WHERE tag='tag'";
 			if (!$posts)
 				{
 					echo "<p>nothing to see here</p>";

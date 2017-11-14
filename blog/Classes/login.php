@@ -14,11 +14,11 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 
-if(isset($_POST['submit'])){
+//if(isset($_POST['submit'])){
 
 
-	$sql = mysqli_query($conn, "SELECT * FROM users WHERE username='" . $username . "' AND password='" . $password . "'");
-	$numRows = mysqli_num_rows($sql);
+	$query = mysqli_query($conn, "SELECT * FROM users WHERE username='" . $username . "' AND password='" . $password . "'");
+	$numRows = mysqli_num_rows($query);
 
 	if ($numRows > 0) {
 		$_SESSION['username'] = $username;
@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
 		header("location: ../admin.php?login=failure");
 	}
 
-}
+//}
 
 
 

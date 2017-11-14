@@ -33,9 +33,9 @@
 				if (!isset($_SESSION['username'])) {
 					echo "<h1>You have to log in to view his page!</h1>";
 					echo "<form action='Classes/login.php' method='post'>
-        				  <input id='user' type='text' name='username' placeholder='Username' value='admin'>
-        				  <input id='pass' type='password' name='password' placeholder='Password' value='wrongpassword'>
-        				  <input id='log' type='submit' name='submit' value='Log in'>
+        				  <input id='login' type='text' name='username' placeholder='Username' value='admin'>
+        				  <input id='login' type='password' name='password' placeholder='Password' value='wrongpassword'>
+        				  <input id='login' type='submit' name='submit' value='Log in'>
         				  </form>";
     			}
 				?>
