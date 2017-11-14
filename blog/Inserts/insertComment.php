@@ -4,22 +4,32 @@
 
 	date_default_timezone_set("Europe/Stockholm"); 
 
-	$name = mysqli_real_escape_string($conn, $_POST['name']);
+	//$name = mysqli_real_escape_string($conn, $_POST['name']);
 	$message = mysqli_real_escape_string($conn, $_POST['message']);
+	$date = mysqli_real_escape_string($conn, $_POST['date']);
 
-	$query = "INSERT INTO comments (name, message, date) VALUES ('$name', '$message', now());";
+	//$query = "UPDATE categories SET message='$message' WHERE date='$date'";
+	$query = "INSERT INTO comments (message, postdate) VALUES ('$message', '$date')";
 	//$sql = "INSERT INTO post (title, content, date) VALUES ('$title', '$content', now());";
 	if (mysqli_query($conn, $query))
 		{
-			//echo 'post SUCCESSFULLY inserted into database <a href="http://localhost:8080/blog/admin.php">go back</a>';
+			//echo 'post SUCCESSFULLY inserted into database <a href="http://localhost:8080/blog/index.php">go back</a>';
 			//echo $sql;
 			header("location: ../index.php?insert=success");
 
 		}
 		else
 		{
-			echo 'post NOT inserted into database <a href="http://localhost:8080/blog/admin.php">go back</a>';
-			echo $query;
+			$query2 = "UPDATE comments SET message='$message' WHERE date='$date'";
+			if (mysqli_query($conn, $query2)){
+				header("location: ../index.php?insert=success");
+			} else {
+				echo 'Update not inserted! <a href="http://localhost:8080/blog/index.php">go back</a>';
+				echo $query;
+				//header("location: ../index.php?insert=error");
+			}
+			//echo 'You have already commented on this post! <a href="http://localhost:8080/blog/index.php">go back</a>';
+			//echo $query;
 			//header("location: ../index.php?insert=error");
 
 		}

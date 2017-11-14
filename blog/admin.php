@@ -51,17 +51,17 @@
 			</form>
 
 			<!-- INSERT POSTS -->
-			<form action="Inserts/insertPost.php" method="post"> <!--change action="" what do you mean change action????-->	
+			<form action="Inserts/insertPost.php" method="post"> 
 				<?php
 				if (isset($_SESSION['username'])) {
 					echo "<select name='select'>";
 					$posts = new ViewPosts();
                     $posts->viewAllCategories();
-                    echo "</select>";
-                    echo "<select name='tagSelect'>";
-                    $posts = new ViewPosts();
-                    $posts->viewAllTags();
-                    echo "</select>";
+                    //echo "</select>";
+                    //echo "<select name='tagSelect'>";
+                    //$posts = new ViewPosts();
+                    //$posts->viewAllTags();
+                    //echo "</select>";
 					echo "<input type='text' name='title' placeholder='Post title'>";
 					echo "<input id='textInput' type='text' name='content' placeholder='Post content'>";
 					echo "<input type='submit' name='submit' value='insert'> "; 
