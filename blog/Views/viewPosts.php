@@ -17,6 +17,15 @@
 					echo "<p class='date'>" . $post['date'] . "</p>";
 					echo "<p>Category : " . $post['category'] .  "</p>";
 					echo "<p>-----------------------------------------------------------------</p>";
+					echo "<p>Comments:</p>";
+					echo "<p>-----------------------------------------------------------------</p>";
+
+					echo "<form action='Inserts/insertComment.php' method='post'>";
+					echo "<input type='text' name='name' placeholder='Your name'>";
+					echo "<input type='text' name='message' placeholder='Your comment'>";
+					echo "<input type='submit' name='submit' value='Submit comment'>";
+					echo "</form>";
+
 				}
 
 			}

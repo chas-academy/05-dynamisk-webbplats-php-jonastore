@@ -20,7 +20,7 @@
 <header id="headerContainer">
     <section id="headerContent">
         <h1>世界上最糟糕的博客 </h1><!--худший блог в мире 世界上最糟糕的博客 дэлхийн хамгийн муу блог 自分を殺そう &#128004;-->
-        <form action="Classes/login.php" method="post">
+        <form id='loginForm' action="Classes/login.php" method="post">
         <!-- HIDES THE LOGIN FORM IF SESSION IS ACTIVE! -->
         <?php
         if (!isset($_SESSION['username'])) {

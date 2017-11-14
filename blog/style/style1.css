@@ -32,7 +32,6 @@ body {
 #headerContent {
     width: 100%;
     height: auto;
-    background-color: #4E2C69;
     opacity: .9;
     border-bottom: .5px solid black;
 }
@@ -42,11 +41,14 @@ body {
 }
 
 form{
-    float: right;
     border: .2px solid white;
     border-radius: 17px;
     box-shadow: inset 0px 0px 25px white, 0px 0px 25px white;
 
+}
+
+#loginForm {
+    float: right;
 }
 
 input, select{

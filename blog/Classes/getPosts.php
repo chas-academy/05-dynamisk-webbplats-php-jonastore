@@ -35,6 +35,17 @@
 				return $postArr;
 		}
 
+		protected function getAllComments() {
+			$query = "SELECT comments.name, post.content, post.date, categories.category 
+			FROM categories INNER JOIN post ON categories.category_id = post.category_fk 
+			ORDER BY date DESC";
+			$result = $this->connect()->query($query); 
+				while ($row = $result->fetch_assoc()){ //comment this
+					$postArr[] = $row;				   //put the rows in the $postArr array
+				}
+				return $postArr;
+		}
+
 
 	}
 

@@ -81,6 +81,8 @@
 					$posts = new Update();
     				$posts->updatePosts();
     				echo "</select>";
+    				//$posts = new ShowUpdateContent();
+    				//$posts->viewAllUpdatePosts();
     				echo "<input name='title' placeholder='New title here'>";
     				echo "<input name='content' placeholder='New content here'>";
     				echo "<input type='submit' name='submit' value='Update'>";
