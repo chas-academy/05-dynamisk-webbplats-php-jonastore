@@ -40,12 +40,6 @@ body {
     float: right;
 }
 
-form{
-    border: .2px solid white;
-    border-radius: 17px;
-    box-shadow: inset 0px 0px 25px white, 0px 0px 25px white;
-
-}
 
 #loginForm {
     float: right;

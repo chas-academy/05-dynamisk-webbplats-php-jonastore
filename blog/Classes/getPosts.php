@@ -42,7 +42,7 @@
 		protected function getAllComments() {
 			//$query = "SELECT post.title, post.content, post.date, comments.name, comments.message 
 			//FROM comments INNER JOIN post ON comments.comment_id = post.comment_fk";
-			$query = "SELECT post.title, post.content, post.date, comments.message
+			$query = "SELECT comments.message
 					  FROM comments
 					  INNER JOIN post ON post.date= comments.postdate ORDER BY date DESC";
 			$result = $this->connect()->query($query); 

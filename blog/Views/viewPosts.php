@@ -17,16 +17,21 @@
 					echo "<p class='date'>" . $post['date'] . "</p>";
 					echo "<p>Category : " . $post['category'] .  "</p>";
 					echo "<p>-----------------------------------------------------------------</p>";
-					echo "<p>Comments: " . $post['message'] . "</p>";
+					echo "<p>Comment: " . $post['message'] . "</p>";
 					//$posts = new ViewPosts();
 					//$posts->viewAllComments();
 					echo "<p>-----------------------------------------------------------------</p>";
 					echo "<form action='Inserts/insertComment.php' method='post'>";
 					echo "<input type='hidden' name='date' value='" . $post['date'] . "'>";
-					//echo "<input type='text' name='name' placeholder='Your name'>";
 					echo "<input type='text' name='message' placeholder='Your comment'>";
 					echo "<input type='submit' name='submit' value='Submit comment'>";
 					echo "</form>";
+					if (isset($_SESSION['username'])){
+                	echo "<form action='Inserts/deleteComment.php' method='post'>";
+					echo "<input type='hidden' name='date' value='" . $post['date'] . "'>";
+                	echo "<input type='submit' name='submit' value='Delete comment'>";
+                	echo "</form>";
+            		}
 
 					
 
