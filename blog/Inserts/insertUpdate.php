@@ -3,6 +3,10 @@
 	//$conn = mysqli_connect("localhost", "root", "root", "blogDatabase");
 
 	include '../Classes/databaseConnection.php';
+	include '../Classes/getPosts.php';
+	include '../Views/showCorrespondingContent.php';
+	include '../Views/updatePosts.php';
+	include '../Views/viewPosts.php';
 
 	date_default_timezone_set("Europe/Stockholm"); 
 	
@@ -10,7 +14,7 @@
 	$content = mysqli_real_escape_string($conn, $_POST['content']);
 	$category_id = mysqli_real_escape_string($conn, $_POST['selectcat']);
 	$tag_id = mysqli_real_escape_string($conn, $_POST['selecttag']);
-	$date = mysqli_real_escape_string($conn, $_POST['select']);
+	$date = mysqli_real_escape_string($conn, $_POST['date']);
 	//update post title, content where DATE=SELECT
 
 	//GET SOME SECURITY IN HERE MAN vvvvvvvvvv DONE?
@@ -20,9 +24,9 @@
 	WHERE date='$date'";
 	if (mysqli_query($conn, $query))
 		{
-			//echo 'post SUCCESSFULLY updated! <a href="http://localhost:8080/blog/admin.php">go back</a>';	
-			//echo $sql;
-			header("location: ../admin.php?update=success");
+			echo 'post SUCCESSFULLY updated! <a href="http://localhost:8080/blog/admin.php">go back</a>';	
+			echo $query;
+			//header("location: ../admin.php?update=success");
 		}
 		else
 		{

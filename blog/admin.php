@@ -59,6 +59,7 @@
 					echo "<input type='text' name='title' placeholder='Post title'>";
 					echo "<input id='textInput' type='text' name='content' placeholder='Post content'>";
 					echo "<input type='submit' name='submit' value='insert'> "; 
+					echo "<br>--------------------------------";
 				} 
 					
 				?>
@@ -67,32 +68,32 @@
 			</form>
 
 			<!-- UPDATE POSTS -->
-			<form action="Inserts/insertUpdate.php" method="post">
+			<!--<form action="Inserts/insertUpdate.php" method="post">-->
 				
 				<?php
 				if (isset($_SESSION['username'])) {
-					echo "<select name='select'>";
-					$posts = new Update();
-    				$posts->updatePosts();
-    				echo "</select>";
-    				echo "<select name='selectcat'>";
-					$posts = new ViewPosts();
-                    $posts->viewAllCategories();
-                    echo "</select>";
-    				echo "<select name='selecttag'>";
-                    $tags = new ViewPosts();
-                    $tags->viewAllTags(); 
-                    echo "</select>";
-    				//$posts = new ShowUpdateContent();
-    				//$posts->viewAllUpdatePosts();
-    				echo "<input name='title' placeholder='New title here'>";
-    				echo "<input name='content' placeholder='New content here'>";
-    				echo "<input type='submit' name='submit' value='Update'>";
-    				
+					//echo "<select name='select'>";
+					//$posts = new Update();
+    				//$posts->updatePosts();
+    				//echo "</select>";
+    				//echo "<select name='selectcat'>";
+					//$posts = new ViewPosts();
+                    //$posts->viewAllCategories();
+                    //echo "</select>";
+    				//echo "<select name='selecttag'>";
+                    //$tags = new ViewPosts();
+                    //$tags->viewAllTags(); 
+                    //echo "</select>";
+    				$posts = new ShowUpdateContent();
+    				$posts->viewAllUpdatePosts();
+    				//echo "<input name='title' placeholder='New title here'>";
+    				//echo "<input name='content' placeholder='New content here'>";
+    				//echo "<input type='submit' name='submit' value='Update'>";
+    				echo "<br>--------------------------------";
     			}
 				?>
 				
-			</form>
+			<!--</form>-->
 
 			<!-- DELETE POSTS -->
 			<form action="Inserts/deletePost.php" method="post">
