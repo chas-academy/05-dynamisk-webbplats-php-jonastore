@@ -1,19 +1,16 @@
 <?php
-	
-	//$conn = mysqli_connect("localhost", "root", "root", "blogDatabase");
 
 	include '../Classes/databaseConnection.php';
 
 	date_default_timezone_set("Europe/Stockholm"); 
 	
-	$id = mysqli_real_escape_string($conn, $_POST['category_id']);
-	$tag = mysqli_real_escape_string($conn, $_POST['content']);
-	$date = mysqli_real_escape_string($conn, $_POST['select']);
+	$id = mysqli_real_escape_string($conn, $_POST['title']);
+	$tag = mysqli_real_escape_string($conn, $_POST['tag']);
 	//update post title, content where DATE=SELECT
 
 	//GET SOME SECURITY IN HERE MAN vvvvvvvvvv DONE?
 
-	$query = "UPDATE post SET title='$title', content='$content' WHERE date='$date'";
+	$query = "UPDATE tags SET tag_id='$id' WHERE tag='$tag'";
 	if (mysqli_query($conn, $query))
 		{
 			//echo 'post SUCCESSFULLY updated! <a href="http://localhost:8080/blog/admin.php">go back</a>';	
@@ -25,5 +22,7 @@
 			//echo 'post NOT updated <a href="http://localhost:8080/blog/admin.php">go back</a>';
 			header("location: ../admin.php?insert=error");
 		}
+
+
 
 ?>

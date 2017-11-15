@@ -16,6 +16,7 @@
 					echo "<p>" . $post['content'] . "</p>"; 
 					echo "<p class='date'>" . $post['date'] . "</p>";
 					echo "<p>Category : " . $post['category'] .  "</p>";
+					echo "<p>#" . $post['tag'] .  "</p>";
 					echo "<p>-----------------------------------------------------------------</p>";
 					echo "<p>Comment: " . $post['message'] . "</p>";
 					//$posts = new ViewPosts();
@@ -32,7 +33,7 @@
                 	echo "<input type='submit' name='submit' value='Delete comment'>";
                 	echo "</form>";
             		}					
-            		
+
 				}
 
 			}
@@ -63,6 +64,21 @@
 				{
 					foreach ($posts as $post) {
 					echo "<p> comment: " . $post['message'] . "</p>";
+				}
+
+			}
+		}
+
+		public function viewAllTags() {
+			$posts = $this->getAllTags();
+			if (!$posts)
+				{
+					echo "<option value='null'>" . "No tags available" . "</options>";
+				} 
+			else
+				{
+					foreach ($posts as $post) {
+					echo "<option value='" . $post['tag_id'] . "'> #" . $post['tag'] . "</option>";
 				}
 
 			}

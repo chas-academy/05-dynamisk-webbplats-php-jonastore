@@ -7,6 +7,7 @@
 	$title = mysqli_real_escape_string($conn, $_POST['title']);
 	$content = mysqli_real_escape_string($conn, $_POST['content']);
 	$category = mysqli_real_escape_string($conn, $_POST['select']);
+	$tag = mysqli_real_escape_string($conn, $_POST['selecttag']);
 
 	//gör något nedan med TAGS och CATEGORIES. Lös innan onsdag nästa vecka!!
 	//$category = mysqli_real_escape_string($conn, $_POST['select']);
@@ -14,7 +15,7 @@
 	//$sql = "INSERT INTO posts (title, content, date, category, tag) VALUES ('$title', '$content', now(), '$tag', '$category')";
 	//skriv en $join som du sedan lägger in i $sql??
 
-	$query = "INSERT INTO post (title, content, category_fk, date) VALUES ('$title', '$content', '$category', NOW());";
+	$query = "INSERT INTO post (title, content, category_fk, tag_fk, date) VALUES ('$title', '$content', '$category', '$tag', NOW());";
 	//$sql = "INSERT INTO post (title, content, date) VALUES ('$title', '$content', now());";
 	if (mysqli_query($conn, $query))
 		{
@@ -30,5 +31,5 @@
 			//header("location: ../admin.php?insert=error");
 
 		}
-
+	
 ?>

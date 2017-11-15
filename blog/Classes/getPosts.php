@@ -5,14 +5,15 @@
 
 		protected function getAllPosts() {
 			//$query = "SELECT * FROM post ORDER BY date DESC";
-			$query = "SELECT post.title, post.content, post.date, categories.category, comments.message
+			$query = "SELECT post.title, post.content, post.date, categories.category, tags.tag, comments.message
 					  FROM categories
 					  INNER JOIN post ON categories.category_id = post.category_fk 
+					  LEFT JOIN tags ON post.tag_fk = tags.tag_id
 					  LEFT JOIN comments ON post.date= comments.postdate ORDER BY date DESC
 					  ";
 
 			$result = $this->connect()->query($query); 
-				while ($row = $result->fetch_array()){ //returns the row result as an array
+				while ($row = $result->fetch_array()){ //returns the row result as an array with associative indices, or keys
 					$postArr[] = $row;				   //put the rows in the $postArr array
 				}
 				return $postArr;
@@ -23,8 +24,8 @@
 			$query = "SELECT * FROM categories
 					  ORDER BY category_id ASC";
 			$result = $this->connect()->query($query); 
-				while ($row = $result->fetch_array()){ //fetch_assoc?
-					$postArr[] = $row;				   //put the rows in the $postArr array
+				while ($row = $result->fetch_array()){ 
+					$postArr[] = $row;				   
 				}
 				return $postArr;
 		}
@@ -33,8 +34,8 @@
 			$query = "SELECT * FROM tags 
 			 		  ORDER BY tag_id DESC";
 			$result = $this->connect()->query($query); 
-				while ($row = $result->fetch_array()){ //fetch_assoc?
-					$postArr[] = $row;				   //put the rows in the $postArr array
+				while ($row = $result->fetch_array()){ 
+					$postArr[] = $row;				   
 				}
 				return $postArr;
 		}

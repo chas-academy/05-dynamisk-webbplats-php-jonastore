@@ -39,16 +39,6 @@
         				  </form>";
     			}
 				?>
-			<!-- INSERT TAGS -->
-			<form action="Inserts/insertTag.php" method="post">
-				<?php
-				if (isset($_SESSION['username'])) {
-				echo "<input type='text' name='tag' placeholder='Write your tag here'>";
-				echo "<input type='submit' name='submit' value='insert'>";
-				}
-
-				?>
-			</form>
 
 			<!-- INSERT POSTS -->
 			<form action="Inserts/insertPost.php" method="post"> 
@@ -61,7 +51,11 @@
                     //echo "<select name='tagSelect'>";
                     //$posts = new ViewPosts();
                     //$posts->viewAllTags();
-                    //echo "</select>";
+                    echo "</select>";
+                    echo "<select name='selecttag'>";
+                    $tags = new ViewPosts();
+                    $tags->viewAllTags(); 
+                    echo "</select>";
 					echo "<input type='text' name='title' placeholder='Post title'>";
 					echo "<input id='textInput' type='text' name='content' placeholder='Post content'>";
 					echo "<input type='submit' name='submit' value='insert'> "; 
