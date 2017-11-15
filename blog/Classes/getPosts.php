@@ -53,6 +53,15 @@
 				return $postArr;
 		}
 
+		protected function getResults() { //deltete this?
+			$query = "SELECT * FROM post WHERE category_fk like '%$category%'";
+			$result = $this->connect()->query($query); 
+				while ($row = $result->fetch_array()){ //fetch_assoc?
+					$postArr[] = $row;				   //put the rows in the $postArr array
+				}
+				return $postArr;
+		}
+
 
 	}
 

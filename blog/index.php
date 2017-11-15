@@ -38,7 +38,7 @@
 
         <!-- SEARCH BY CATEGORY -->
     <section class="row" id="mainContainer">
-        <form action="Classes/findPosts.php" method="post">    
+        <form action="Inserts/findCategory.php" method="post">    
             <select name='select'>
                 <?php
                     $posts = new ViewPosts();

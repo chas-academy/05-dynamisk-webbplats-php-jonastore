@@ -84,6 +84,21 @@
 			}
 		}
 
+		public function viewResults() {
+			$posts = $this->getAllTags();
+			if (!$posts)
+				{
+					echo "nope!";
+				} 
+			else
+				{
+					foreach ($posts as $post) {
+					echo "<p>" . $post['title'] . "</p><p>" . $post['content'] . "</p>";
+				}
+
+			}
+		}
+
 	}
 
 

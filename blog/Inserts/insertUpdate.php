@@ -24,9 +24,9 @@
 	WHERE date='$date'";
 	if (mysqli_query($conn, $query))
 		{
-			echo 'post SUCCESSFULLY updated! <a href="http://localhost:8080/blog/admin.php">go back</a>';	
-			echo $query;
-			//header("location: ../admin.php?update=success");
+			//echo 'post SUCCESSFULLY updated! <a href="http://localhost:8080/blog/admin.php">go back</a>';	
+			//echo $query;
+			header("location: ../admin.php?update=success");
 		}
 		else
 		{
