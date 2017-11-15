@@ -31,10 +31,8 @@
 					echo "<input type='hidden' name='date' value='" . $post['date'] . "'>";
                 	echo "<input type='submit' name='submit' value='Delete comment'>";
                 	echo "</form>";
-            		}
-
-					
-
+            		}					
+            		
 				}
 
 			}
