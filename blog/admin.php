@@ -47,7 +47,7 @@
 					echo "<select name='select'>";
 					$posts = new ViewPosts();
                     $posts->viewAllCategories();
-                    //echo "</select>";
+                    echo "</select>";
                     //echo "<select name='tagSelect'>";
                     //$posts = new ViewPosts();
                     //$posts->viewAllTags();
@@ -75,6 +75,14 @@
 					$posts = new Update();
     				$posts->updatePosts();
     				echo "</select>";
+    				echo "<select name='selectcat'>";
+					$posts = new ViewPosts();
+                    $posts->viewAllCategories();
+                    echo "</select>";
+    				echo "<select name='selecttag'>";
+                    $tags = new ViewPosts();
+                    $tags->viewAllTags(); 
+                    echo "</select>";
     				//$posts = new ShowUpdateContent();
     				//$posts->viewAllUpdatePosts();
     				echo "<input name='title' placeholder='New title here'>";
