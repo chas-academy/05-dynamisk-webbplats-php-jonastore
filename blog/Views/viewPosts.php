@@ -23,19 +23,19 @@
 					echo "<p>-----------------------------------------------------------------</p>";
 					//echo "<p>Comment: " . $post['message'] . "</p>";
 					//$posts = new ViewPosts();
-					//$posts->viewJunction();
+					//$posts->Junction();
 
 					echo "<p>-----------------------------------------------------------------</p>";
 					echo "<form action='Inserts/insertComment.php' method='post'>";
 					echo "<input type='hidden' name='date' value='" . $post['date'] . "'>";
 					echo "<input type='hidden' name='id' value='" . $post['id'] . "'>";
-					echo "<input type='text' name='message' placeholder='Your reaction'>";
-					echo "<input type='submit' name='submit' value='Submit reaction'>";
+					echo "<input type='text' name='message' placeholder='Your comment'>";
+					echo "<input type='submit' name='submit' value='Submit comment'>";
 					echo "</form>";
 					if (isset($_SESSION['username'])){
                 	echo "<form action='Inserts/deleteComment.php' method='post'>";
 					echo "<input type='hidden' name='date' value='" . $post['date'] . "'>";
-                	echo "<input type='submit' name='submit' value='Delete reactions related to this post'>";
+                	echo "<input type='submit' name='submit' value='Delete comment'>";
                 	echo "</form>";
             		}
            
@@ -95,7 +95,7 @@
 		}
 
 		public function viewJunction() {
-			$posts = $this->getJunction();
+			$posts = $this->getAllPosts();
 			if (!$posts)
 				{
 					echo "<option value='null'>" . "No comments" . "</options>";
