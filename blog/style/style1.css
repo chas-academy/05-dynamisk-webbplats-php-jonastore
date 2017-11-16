@@ -7,7 +7,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 1%;
 }
 
 #mainContainer {
@@ -33,7 +33,6 @@ body {
     width: 100%;
     height: auto;
     opacity: .9;
-    border-bottom: .5px solid black;
 }
 
 .headerText {
@@ -127,3 +126,14 @@ li {
     text-decoration: none;
 }
 
+#results {
+    background-color: #4E2C69;
+    width: 40%;
+    opacity: .8;
+    height: auto;
+
+}
+
+#searchFields {
+    display: block;
+}

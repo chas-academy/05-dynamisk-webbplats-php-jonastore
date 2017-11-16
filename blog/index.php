@@ -35,19 +35,44 @@
         </form>
     </section>
 </header>
-
-        <!-- SEARCH BY CATEGORY -->
+<main>
     <section class="row" id="mainContainer">
-        <form action="Inserts/findCategory.php" method="post">    
-            <select name='select'>
-                <?php
-                    $posts = new ViewPosts();
-                    $posts->viewAllCategories();
-                ?>
-            </select>
-            <input type='submit' name='submit' value='Find Posts'>
-        </form>
 
+        <article id="searchFields">
+
+            <!-- SEARCH FORM -->
+                   <form action="Inserts/searchPost.php" method="post">    
+                    <input type='text' name='search' placeholder='Search...'>
+                    <input type='submit' name='submit' value='Find Posts'>
+                </form>
+                
+                    <!-- SEARCH BY CATEGORY -->
+            <form action="Inserts/findCategory.php" method="post">    
+                <select name='select'>
+                    <?php
+                        $posts = new ViewPosts();
+                        $posts->viewAllCategories();
+                    ?>
+                </select>
+                <input type='submit' name='submit' value='Find Posts'>
+            </form>
+    
+                <!-- SEARCH BY TAG -->
+                   <form action="Inserts/findTag.php" method="post">    
+                    <select name='select'>
+                        <?php
+                            $posts = new ViewPosts();
+                            $posts->viewAllTags();
+                        ?>
+                    </select>
+                    <input type='submit' name='submit' value='Find Posts'>
+                </form>
+    
+        </article>
+
+
+
+        
 
         <!-- MAIN CONTENT -->
         <article id="mainContent">
@@ -59,7 +84,7 @@
         </article>
     </section>
     
-    </main>
+</main>
     
 </body>
 </html>

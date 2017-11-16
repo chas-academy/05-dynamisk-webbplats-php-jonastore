@@ -12,8 +12,8 @@
 					  LEFT JOIN comments ON post.date= comments.postdate ORDER BY date DESC
 					  ";
 
-			$result = $this->connect()->query($query); 
-				while ($row = $result->fetch_array()){ //returns the row result as an array with associative indices, or keys
+			$result = $this->connect()->query($query); //creates a query to the database
+				while ($row = $result->fetch_array()){ //returns the row result as an array with associative indices(keys)
 					$postArr[] = $row;				   //put the rows in the $postArr array
 				}
 				return $postArr;
@@ -53,14 +53,6 @@
 				return $postArr;
 		}
 
-		protected function getResults() { //deltete this?
-			$query = "SELECT * FROM post WHERE category_fk like '%$category%'";
-			$result = $this->connect()->query($query); 
-				while ($row = $result->fetch_array()){ //fetch_assoc?
-					$postArr[] = $row;				   //put the rows in the $postArr array
-				}
-				return $postArr;
-		}
 
 
 	}

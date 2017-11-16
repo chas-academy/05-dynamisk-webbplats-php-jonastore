@@ -1,9 +1,9 @@
 <?php
 	include '../Classes/databaseConnection.php';
 
-	$category = $_POST['select'];
+	$search = $_POST['search'];
 
-	$query = mysqli_query($conn, "SELECT * FROM post WHERE category_fk like '%$category%'");
+	$query = mysqli_query($conn, "SELECT * FROM post WHERE content like '%$search%' OR title like '%$search%'");
 ?>
 
 <!DOCTYPE html>
@@ -22,12 +22,11 @@
 <div id="results">
 <pre>
 	<?php
-	while ($row = $query->fetch_array()){
-	    echo "<p> title: " . $row['title'] . "</p><p> content: " . $row['content'] . "<p>";
+	while ($post = $query->fetch_array()){
+	    echo "<p> title: 标 " . $post['title'] . " 题</p><p> content: " . $post['content'] . "<p>";
 	    echo "<p>---------------------------------------------------------------------</p>";
 		
 		}
-	
 	?>	
 </pre>
 </div>

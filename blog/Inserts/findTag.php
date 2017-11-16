@@ -1,9 +1,9 @@
 <?php
 	include '../Classes/databaseConnection.php';
 
-	$category = $_POST['select'];
+	$tag = $_POST['select'];
 
-	$query = mysqli_query($conn, "SELECT * FROM post WHERE category_fk like '%$category%'");
+	$query = mysqli_query($conn, "SELECT * FROM post WHERE tag_fk like '%$tag%'");
 ?>
 
 <!DOCTYPE html>
@@ -25,9 +25,7 @@
 	while ($row = $query->fetch_array()){
 	    echo "<p> title: " . $row['title'] . "</p><p> content: " . $row['content'] . "<p>";
 	    echo "<p>---------------------------------------------------------------------</p>";
-		
 		}
-	
 	?>	
 </pre>
 </div>
