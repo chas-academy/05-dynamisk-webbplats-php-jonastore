@@ -11,8 +11,7 @@
 					  LEFT JOIN tags ON post.tag_fk = tags.tag_id
 					  LEFT JOIN post_comments ON post.id = post_comments.post_fk
 					  LEFT JOIN comments ON comments.postdate = post_comments.comment_fk
-					  GROUP BY postdate
-					  ";
+							  ";
 
 
 			$result = $this->connect()->query($query); //creates a query to the database
