@@ -6,10 +6,11 @@
 
 	//$name = mysqli_real_escape_string($conn, $_POST['name']);
 	$message = mysqli_real_escape_string($conn, $_POST['message']);
+	$id = mysqli_real_escape_string($conn, $_POST['id']);
 	$date = mysqli_real_escape_string($conn, $_POST['date']);
 
-	//$query = "UPDATE categories SET message='$message' WHERE date='$date'";
 	$query = "INSERT INTO comments (message, postdate) VALUES ('$message', '$date')";
+	$query2 = "INSERT INTO post_comments (comment_fk, post_fk) VALUES ('$date', '$id')";
 	//$sql = "INSERT INTO post (title, content, date) VALUES ('$title', '$content', now());";
 	if (mysqli_query($conn, $query))
 		{
@@ -20,18 +21,40 @@
 		}
 		else
 		{
-			$queryEdit = "UPDATE comments SET message='$message' WHERE postdate='$date'";
+			/*$queryEdit = "UPDATE comments SET message='$message' WHERE postdate='$date'";
 			if (mysqli_query($conn, $queryEdit)){
 				header("location: ../index.php?insert=success");
 			} else {
 				echo 'Update not inserted! <a href="http://localhost:8080/blog/index.php">go back</a>';
 				echo $queryEdit;
 				//header("location: ../index.php?insert=error");
-			}
+			}*/
 			//echo 'You have already commented on this post! <a href="http://localhost:8080/blog/index.php">go back</a>';
 			//echo $query;
-			//header("location: ../index.php?insert=error");
+			header("location: ../index.php?insert=error");
 
 		}
+	if (mysqli_query($conn, $query2))
+		{
+			//echo 'post SUCCESSFULLY inserted into database <a href="http://localhost:8080/blog/index.php">go back</a>';
+			//echo $sql;
+			header("location: ../index.php?insert=success");
 
+		}
+		else
+		{
+			/*$queryEdit = "UPDATE comments SET message='$message' WHERE postdate='$date'";
+			if (mysqli_query($conn, $queryEdit)){
+				header("location: ../index.php?insert=success");
+			} else {
+				echo 'Update not inserted! <a href="http://localhost:8080/blog/index.php">go back</a>';
+				echo $queryEdit;
+				//header("location: ../index.php?insert=error");
+			}*/
+			//echo 'You have already commented on this post! <a href="http://localhost:8080/blog/index.php">go back</a>';
+			//echo $query;
+			header("location: ../index.php?insert=error");
+
+		}
+	
 ?>

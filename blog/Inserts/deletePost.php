@@ -8,7 +8,6 @@
 	//$content = $_POST['content'];
 	$date = mysqli_real_escape_string($conn, $_POST['select']);
 	//update post title, content where DATE=SELECT
-
 	$query = "DELETE FROM post WHERE date='$date'";
 	if (mysqli_query($conn, $query))
 		{

@@ -3,7 +3,7 @@
 
 	$tag = $_POST['select'];
 
-	$query = mysqli_query($conn, "SELECT * FROM post WHERE tag_fk like '%$tag%'");
+	$query = mysqli_query($conn, "SELECT * FROM post WHERE tag_fk LIKE '%$tag%'");
 ?>
 
 <!DOCTYPE html>

@@ -3,9 +3,9 @@
 
 	$search = $_POST['search'];
 
-	$query = mysqli_query($conn, "SELECT * FROM post WHERE content like '%$search%' OR title like '%$search%'");
+	$query = mysqli_query($conn, "SELECT * FROM post WHERE content LIKE '%$search%' OR title LIKE '%$search%'");
+	
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

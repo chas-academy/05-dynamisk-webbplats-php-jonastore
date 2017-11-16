@@ -3,7 +3,7 @@
 
 	$category = $_POST['select'];
 
-	$query = mysqli_query($conn, "SELECT * FROM post WHERE category_fk like '%$category%'");
+	$query = mysqli_query($conn, "SELECT * FROM post WHERE category_fk LIKE '%$category%'");
 ?>
 
 <!DOCTYPE html>
