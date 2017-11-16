@@ -16,9 +16,9 @@
 
 			$result = $this->connect()->query($query); //creates a query to the database
 				while ($row = $result->fetch_array()){ //returns the row result as an array with associative indices(keys)
-					$postArr[] = $row;				   //put the rows in the $postArr array
+					$fetchArr[] = $row;				   //put the rows in the $postArr array
 				}
-				return $postArr;
+				return $fetchArr;
 				
 		}
 
@@ -27,9 +27,9 @@
 					  ORDER BY category_id ASC";
 			$result = $this->connect()->query($query); 
 				while ($row = $result->fetch_array()){ 
-					$postArr[] = $row;				   
+					$fetchArr[] = $row;				   
 				}
-				return $postArr;
+				return $fetchArr;
 		}
 
 		protected function getAllTags() {
@@ -37,9 +37,9 @@
 			 		  ORDER BY tag_id DESC";
 			$result = $this->connect()->query($query); 
 				while ($row = $result->fetch_array()){ 
-					$postArr[] = $row;				   
+					$fetchArr[] = $row;				   
 				}
-				return $postArr;
+				return $fetchArr;
 		}
 
 		protected function getAllComments() {
@@ -47,9 +47,9 @@
 			 		  ";
 			$result = $this->connect()->query($query); 
 				while ($row = $result->fetch_array()){ 
-					$postArr[] = $row;				   
+					$fetchArr[] = $row;				   
 				}
-				return $postArr;
+				return $fetchArr;
 		}
 
 		protected function getJunction() {
@@ -59,9 +59,9 @@
               		  JOIN comments ON comments.postdate = post_comments.comment_fk GROUP BY post_fk";
 			$result = $this->connect()->query($query); 
 				while ($row = $result->fetch_array()){ 
-					$postArr[] = $row;				   
+					$fetchArr[] = $row;				   
 				}
-				return $postArr;
+				return $fetchArr;
 		}
 
 

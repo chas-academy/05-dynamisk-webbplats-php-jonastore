@@ -29,12 +29,12 @@
         <form id='loginForm' action="Classes/login.php" method="post">
         <!-- HIDES THE LOGIN FORM IF SESSION IS ACTIVE! -->
         <?php
-        if (!isset($_SESSION['username'])) {
+        if (!isset($_SESSION['login'])) {
         echo "<input id='user' type='text' name='username' placeholder='Username' value='admin'>";
         echo "<input id='pass' type='password' name='password' placeholder='Password' value='wrongpassword'>";
         echo "<input id='log' type='submit' name='submit' value='Sign in'>";
         }
-        if (isset($_SESSION['username'])) {
+        if (isset($_SESSION['login'])) {
         echo "<input type='submit' name='submit' value='Admin page'>";
         }
         ?>
@@ -83,20 +83,16 @@
 
         <!-- MAIN CONTENT -->
         <article id="mainContent">
-        
-        <h3>Message Board!</h3>
+        <!-- MESSAGE BOARD -->      
+        <h3>Reaction Board!</h3>
         <select multiple="multiple">
-        <option>Down below are the reactions to each post!</option>
         <?php
-                        /* MESSAGE BOARD */
-        //echo "<p>---------------------------------------------------------------------</p>"; 
-        
-
-        while ($post = $query->fetch_array()){ 
-        echo "<option>Reactions to '" . $post['title'] . "': " . $post['message'] . "</option>";
-        }
-        //echo "</select>"; 
-        //echo "<form>";
+            while ($post = $query->fetch_array()){ 
+            echo "<option>Reaction to '" . $post['title'] . "': " . $post['message'] . "</option>";
+            echo "<option>------------------------------------------------------------------</option>";
+            }
+            //echo "</select>"; 
+            //echo "<form>";
         ?>
         </select>
         <?php

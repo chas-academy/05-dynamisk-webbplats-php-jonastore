@@ -21,7 +21,7 @@ $password = $_POST['password'];
 	$numRows = mysqli_num_rows($query);
 
 	if ($numRows > 0) {
-		$_SESSION['username'] = $username;
+		$_SESSION['login'] = $username;
 		header("location: ../admin.php?login=success");
 	}
 	else {

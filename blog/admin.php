@@ -4,7 +4,7 @@
     include_once 'Classes/getPosts.php';
     include_once 'Views/viewPosts.php';
     include_once 'Views/updatePosts.php';
-    include_once 'Views/showCorrespondingContent.php';
+    //include_once 'Views/showCorrespondingContent.php';
     session_start();
     //error_reporting(0);
 ?>
@@ -19,7 +19,7 @@
 <body>
 	<section id="mainContainer">
 		<?php
-				if (isset($_SESSION['username'])){
+				if (isset($_SESSION['login'])){
 					echo "<form action='Classes/logout.php' method='post'>";
 					echo "<input type='submit' name='submit' value='Log out'>";
 					echo "</form>";
@@ -30,7 +30,7 @@
 			
 			<a href="http://localhost:8080/blog/">go back</a>
 			<?php
-				if (!isset($_SESSION['username'])) {
+				if (!isset($_SESSION['login'])) {
 					echo "<h1>You have to log in to view his page!</h1>";
 					echo "<form action='Classes/login.php' method='post'>
         				  <input id='login' type='text' name='username' placeholder='Username' value='admin'>
@@ -43,7 +43,7 @@
 			<!-- INSERT POSTS -->
 			<form action="Inserts/insertPost.php" method="post"> 
 				<?php
-				if (isset($_SESSION['username'])) {
+				if (isset($_SESSION['login'])) {
 					echo "<select name='select'>";
 					$posts = new ViewPosts();
                     $posts->viewAllCategories();
@@ -71,7 +71,7 @@
 			<!--<form action="Inserts/insertUpdate.php" method="post">-->
 				
 				<?php
-				if (isset($_SESSION['username'])) {
+				if (isset($_SESSION['login'])) {
 					//echo "<select name='select'>";
 					//$posts = new Update();
     				//$posts->updatePosts();
@@ -84,7 +84,7 @@
                     //$tags = new ViewPosts();
                     //$tags->viewAllTags(); 
                     //echo "</select>";
-    				$posts = new ShowUpdateContent();
+    				$posts = new ViewPosts();
     				$posts->viewAllUpdatePosts();
     				//echo "<input name='title' placeholder='New title here'>";
     				//echo "<input name='content' placeholder='New content here'>";
@@ -98,7 +98,7 @@
 			<!-- DELETE POSTS -->
 			<form action="Inserts/deletePost.php" method="post">
 				<?php
-				if (isset($_SESSION['username'])) {
+				if (isset($_SESSION['login'])) {
 					echo "<select name='select'>";
 					$posts = new Update();
     				$posts->updatePosts();

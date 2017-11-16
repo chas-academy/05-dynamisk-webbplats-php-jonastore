@@ -52,6 +52,7 @@ input, select{
     color: white; 
     padding: 10px;
     text-shadow: 0 0 1px white;
+    text-align: center;
 
 }
 
