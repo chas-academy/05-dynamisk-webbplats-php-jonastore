@@ -6,7 +6,7 @@
     include_once 'Views/updatePosts.php';
     include_once 'Views/showCorrespondingContent.php';
     session_start();
-
+    //error_reporting(0);
 ?>
 
 <!DOCTYPE html>

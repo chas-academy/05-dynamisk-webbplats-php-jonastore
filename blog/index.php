@@ -3,6 +3,12 @@
     include 'Classes/getPosts.php';
     include 'Views/viewPosts.php';
     session_start();
+
+    $query = mysqli_query($conn, "SELECT DISTINCT comments.message, post.*
+                                  FROM post
+                                  JOIN post_comments ON post_comments.post_fk = post.id
+                                  JOIN comments ON comments.postdate = post_comments.comment_fk ORDER BY title");
+
 ?>
 
 <!DOCTYPE html>
@@ -77,9 +83,25 @@
 
         <!-- MAIN CONTENT -->
         <article id="mainContent">
+
+        <h3>Message Board!</h3>
         <?php
+                        /* MESSAGE BOARD */
+        echo "<p>---------------------------------------------------------------------</p>"; 
+        echo "<form>";
+        echo "<select>";
+
+        while ($post = $query->fetch_array()){ 
+        echo "<option> Reactions to blogpost " . $post['title'] . ": " . $post['message'] . "</option>";
+        echo "<p>---------------------------------------------------------------------</p>";
+        }
+        echo "</select>"; 
+        echo "<form>";
+
+            /* BLOG POSTS */
             $posts = new ViewPosts();
             $posts->viewAllPosts();
+            
         ?>
     
         </article>
