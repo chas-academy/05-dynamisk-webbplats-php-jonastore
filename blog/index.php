@@ -83,16 +83,17 @@
 
         <!-- MAIN CONTENT -->
         <article id="mainContent">
-        <select multiple="multiple">
+        
         <h3>Message Board!</h3>
+        <select multiple="multiple">
+        <option>Down below are the reactions to each post!</option>
         <?php
                         /* MESSAGE BOARD */
         //echo "<p>---------------------------------------------------------------------</p>"; 
         
 
         while ($post = $query->fetch_array()){ 
-        echo "<option>Reactions to " . $post['title'] . ": " . $post['message'] . "</option>";
-        echo "<p>---------------------------------------------------------------------</p>";
+        echo "<option>Reactions to '" . $post['title'] . "': " . $post['message'] . "</option>";
         }
         //echo "</select>"; 
         //echo "<form>";
