@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="../style/style1.css">
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
     <title>Blog main page</title>
 </head>
 <body>
@@ -23,7 +23,7 @@
 <pre>
 	<?php
 	while ($row = $query->fetch_array()){
-	    echo "<p> title: " . $row['title'] . "</p><p> content: " . $row['content'] . "<p>";
+	    echo "<p> title: &#127853" . $row['title'] . " &#127852</p><p> content: " . $row['content'] . "<p>";
 	    echo "<p>---------------------------------------------------------------------</p>";
 		
 		}

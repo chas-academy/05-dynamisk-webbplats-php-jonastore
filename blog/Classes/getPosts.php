@@ -16,7 +16,7 @@
 
 			$result = $this->connect()->query($query); //creates a query to the database
 				while ($row = $result->fetch_array()){ //returns the row result as an array with associative indices(keys)
-					$fetchArr[] = $row;				   //put the rows in the $postArr array
+					$fetchArr[] = $row;				   //put the rows in the $fetchArr array
 				}
 				return $fetchArr;
 				

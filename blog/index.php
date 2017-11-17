@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="style/style1.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
     <title>Blog main page</title>
 </head>
 <body>
@@ -25,7 +25,7 @@
 
 <header id="headerContainer">
     <section id="headerContent">
-        <h1>世界上最糟糕的博客 </h1><!--худший блог в мире 世界上最糟糕的博客 дэлхийн хамгийн муу блог 自分を殺そう &#128004;-->
+        <h1>世界上最糟糕的博客 &#128004;</h1><!--худший блог в мире 世界上最糟糕的博客 дэлхийн хамгийн муу блог 自分を殺そう &#128004;-->
         <form id='loginForm' action="Classes/login.php" method="post">
         <!-- HIDES THE LOGIN FORM IF SESSION IS ACTIVE! -->
         <?php
@@ -83,9 +83,10 @@
 
         <!-- MAIN CONTENT -->
         <article id="mainContent">
+
         <!-- MESSAGE BOARD -->      
-        <h3>Reaction Board!</h3>
-        <select multiple="multiple">
+        <h3>&#128517; Reaction Board! &#128531;</h3>
+        <select multiple="multiple" id="messageBox">
         <?php
             while ($post = $query->fetch_array()){ 
             echo "<option>Reaction to '" . $post['title'] . "': " . $post['message'] . "</option>";

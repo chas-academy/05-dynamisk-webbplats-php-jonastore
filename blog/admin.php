@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	    <link rel="stylesheet" type="text/css" href="style/style1.css">
+	    <link rel="stylesheet" type="text/css" href="style/style.css">
 
 	<title>Admin page</title>
 </head>

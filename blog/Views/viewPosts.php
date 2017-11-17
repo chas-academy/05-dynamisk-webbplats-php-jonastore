@@ -15,9 +15,9 @@
 
 					foreach ($posts as $post) {
 
-					echo "<h3>标 " . $post['title'] . " 题</h3>";
+					echo "<h3>&#127853; " . $post['title'] . " &#127852</h3>";
 					echo "<p>" . $post['content'] . "</p>"; 
-					echo "<p class='date'>" . $post['date'] . "</p>";
+					echo "<p class=''>&#9200; <i>" . $post['date'] . "</i></p>";
 					echo "<p>Category : " . $post['category'] .  "</p>";
 					echo "<p>#" . $post['tag'] .  "</p>";					
 					echo "<form action='Inserts/insertComment.php' method='post'>";

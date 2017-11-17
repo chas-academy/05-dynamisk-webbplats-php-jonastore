@@ -14,7 +14,6 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 
-//if(isset($_POST['submit'])){
 
 
 	$query = mysqli_query($conn, "SELECT * FROM users WHERE username='" . $username . "' AND password='" . $password . "'");
@@ -28,7 +27,7 @@ $password = $_POST['password'];
 		header("location: ../admin.php?login=failure");
 	}
 
-//}
+
 
 
 
