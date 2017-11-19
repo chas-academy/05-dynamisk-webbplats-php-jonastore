@@ -148,14 +148,14 @@ li {
 }
 
 *::-webkit-scrollbar {
-    width: 1em;
+    width: 1.5em;
 }
  
 *::-webkit-scrollbar-track {
   border: 1px solid #17336f;
 
     background-color: beige;
-    border-radius: 20px;
+    border-radius: 10px;
 }
  
 *::-webkit-scrollbar-thumb {
@@ -174,7 +174,7 @@ li {
 }
 
 #messageBox {
-    border-radius: 20px;
+    border-radius: 10px;
     height: 200px;
     outline: none;
 }
