@@ -28,7 +28,7 @@
 				<h1>Write a blog post! 寫博文！</h1>
 		<article id="mainContent">
 			
-			<a href="http://localhost:8080/blog/">go back</a>
+			<a href="http://jonastoremar.chas.academy/05/blog/">go back</a>
 			<?php
 				if (!isset($_SESSION['login'])) {
 					echo "<h1>You have to log in to view his page!</h1>";
@@ -48,9 +48,6 @@
 					$posts = new ViewPosts();
                     $posts->viewAllCategories();
                     echo "</select>";
-                    //echo "<select name='tagSelect'>";
-                    //$posts = new ViewPosts();
-                    //$posts->viewAllTags();
                     echo "</select>";
                     echo "<select name='selecttag'>";
                     $tags = new ViewPosts();
@@ -100,7 +97,7 @@
 				<?php
 				if (isset($_SESSION['login'])) {
 					echo "<select name='select'>";
-					$posts = new Update();
+					$posts = new viewPosts();
     				$posts->updatePosts();
     				echo "</select>";
     				echo "<input type='submit' name='delete' value='Delete'>";
