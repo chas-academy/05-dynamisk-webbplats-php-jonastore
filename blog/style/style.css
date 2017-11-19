@@ -1,6 +1,11 @@
 body {
-    background-image: url("../images/bg.PNG");
-    background-color: #17336f;
+    background: repeating-linear-gradient(
+       135deg,
+       #F25E5C,
+       #F25E5C 180px,
+       #13D6DC 180px,
+       #13D6DC 360px
+     );
     background-size: cover;
     background-repeat: no-repeat;
     color: black;
