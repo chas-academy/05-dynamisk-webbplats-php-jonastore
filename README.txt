@@ -1,1 +1,1 @@
-http://jonastoremar.chas.academy/05
+http://jonastoremar.chas.academy/05/blog/
